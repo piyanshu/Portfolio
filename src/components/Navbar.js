@@ -10,12 +10,12 @@ function Navbar(){
     ];
     const renderedLinks = links.map((link) => {
         return (
-        <Link key={link.label} to={link.path}>
+        <Link key={link.label} to={link.path} className='mx-6'>
             { link.label }
         </Link>
     )});
     return (
-        <div>
+        <div className='text-right p-6 bg-slate-500'>
             {renderedLinks}
         </div>
     )

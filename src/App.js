@@ -5,15 +5,20 @@ import AboutPage from "./Pages/AboutPage";
 
 function App(){
     return (
-        <div>
-            <Navbar/>
+        <div className="h-screen">
             <div>
+                <Navbar/>
+            </div>
+            <div className="h-5/6 border-2">
                 <Route path='/'>
                     <HomePage/>
                 </Route>
                 <Route path='/about'>
                     <AboutPage/>
                 </Route>
+            </div>
+            <div className="h-1/10">
+                
             </div>
         </div>
     );
