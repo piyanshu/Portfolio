@@ -2,7 +2,6 @@ import classNames from "classnames";
 
 function Image({profile, className}){
     const classes = classNames(
-        'rounded-full',
         className
     );
 

@@ -1,24 +1,10 @@
-import useNavigation from "../hooks/use-navigation";
-import classNames from "classnames";
-
-function Link({ children, to, className }){
-    const { navigate } = useNavigation();
-
-    const classes = classNames(className);
-
+function Link({children, to}){
     const handleClick = (event) => {
-        if(event.ctrlkey || event.metakey){
-            return;
-        }
-
-        event.preventDefault();
-        
-        navigate(to);
+        console.log(children);
     }
-    return (
-        <a href={to} onClick={handleClick} className={classes}> 
-            {children} 
-        </a>
-    );
+    return <a href={to} onClick={handleClick}>
+        {children}
+    </a>
 };
+
 export default Link;

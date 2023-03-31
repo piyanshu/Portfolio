@@ -1,4 +1,4 @@
-import Link from './Link';
+import Navlink from "./Navlink";
 
 function Navbar(){
     const links = [
@@ -10,12 +10,12 @@ function Navbar(){
     ];
     const renderedLinks = links.map((link) => {
         return (
-        <Link key={link.label} to={link.path} className='mx-6'>
+        <Navlink key={link.label} to={link.path} className='mx-6'>
             { link.label }
-        </Link>
+        </Navlink>
     )});
     return (
-        <div className='text-right p-6 bg-slate-500'>
+        <div className='text-right p-4 text-xl font-medium'>
             {renderedLinks}
         </div>
     )

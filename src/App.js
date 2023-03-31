@@ -9,16 +9,13 @@ function App(){
             <div>
                 <Navbar/>
             </div>
-            <div className="h-5/6 border-2">
+            <div className="">
                 <Route path='/'>
                     <HomePage/>
                 </Route>
                 <Route path='/about'>
                     <AboutPage/>
                 </Route>
-            </div>
-            <div className="h-1/10">
-                
             </div>
         </div>
     );
