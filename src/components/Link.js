@@ -1,8 +1,5 @@
 function Link({children, to}){
-    const handleClick = (event) => {
-        console.log(children);
-    }
-    return <a href={to} onClick={handleClick}>
+    return <a href={to}>
         {children}
     </a>
 };
