@@ -21,7 +21,7 @@ function AboutPage(){
                         <br/>
                         <br/>
                         I'm constantly eager to learn about new technologies and try to find solutions 
-                        to ever more problems, which helps me foreward in my life.
+                        to ever more problems, which helps me forward in my life.
                         <br/>
                         <br/>
                         My Hobbies are playing cricket and working out.
