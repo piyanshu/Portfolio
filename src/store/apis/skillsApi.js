@@ -1,7 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-
-
 const skillsApi = createApi({
     reducerPath: 'skills',
     baseQuery: fetchBaseQuery({
@@ -10,6 +8,7 @@ const skillsApi = createApi({
     endpoints(builder){
         return {
             fetchSkills: builder.query({
+                providesTags: ['Skills'],
                 query: () => {
                     return {
                         url: '/skills',
@@ -18,6 +17,7 @@ const skillsApi = createApi({
                 }
             }),
             addSkills: builder.mutation({
+                invalidatesTags: ['Skills'],
                 query: (skill) => {
                     return {
                         url: '/skills',
@@ -25,8 +25,7 @@ const skillsApi = createApi({
                         body: {
                             url: skill.url,
                             title: skill.title
-                        }
-                        
+                        } 
                     }
                 }
             })
