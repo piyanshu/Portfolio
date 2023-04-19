@@ -7,7 +7,7 @@ import SkillsPage from "./Pages/SkillsPage";
 function App(){
     return (
         <div className="h-screen">
-            <div>
+            <div className="border border-sky-500">
                 <Navbar/>
             </div>
             <div className="">
