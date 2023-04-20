@@ -1,6 +1,5 @@
 import { useAddSkillsMutation, useFetchSkillsQuery } from "../store";
 import Form from "../components/Form";
-import Button from "../components/Button";
 import Skill from "../components/Skill";
 import { useState } from "react";
 
@@ -15,6 +14,7 @@ function SkillsPage(){
     }
     const handleAddSkill = (skill) => {
         addSkill(skill);
+        setIsShown(false);
     }
     let content;
     if(isFetching){
