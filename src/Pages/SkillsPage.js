@@ -11,11 +11,12 @@ function SkillsPage(){
 
     const handleClick = () => {
         setIsShown(true);
-    }
+    };
     const handleAddSkill = (skill) => {
         addSkill(skill);
         setIsShown(false);
-    }
+    };
+
     let content;
     if(isFetching){
         content = <div>Please wait till your skills are fetch...</div>
@@ -26,9 +27,11 @@ function SkillsPage(){
         })
     }
     return <div>
-        <button onClick={handleClick}>
+
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded float-right mr-2" onClick={handleClick}>
             Add Skill
         </button>
+
         {isShown && <Form onAddSkill={handleAddSkill}/>}
 
         <div className="flex flex-wrap">{content}</div>
