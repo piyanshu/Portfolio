@@ -29,13 +29,23 @@ const skillsApi = createApi({
                     }
                 }
             }),
+            removeSkills: builder.mutation({
+                invalidatesTags: ['Skills'],
+                query: (skill) => {
+                    return {
+                        url: `/skills/${skill.id}`,
+                        method:'POST'
+                    }
+                }
+            })
         }
     }
 });
 
 export const {
     useFetchSkillsQuery,
-    useAddSkillsMutation
+    useAddSkillsMutation,
+    useRemoveSkillsMutation
 } = skillsApi;
 
 export { skillsApi };

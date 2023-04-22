@@ -16,5 +16,6 @@ setupListeners(store.dispatch);
 export { store };
 export {
     useFetchSkillsQuery,
-    useAddSkillsMutation
+    useAddSkillsMutation,
+    useRemoveSkillsMutation
 } from './apis/skillsApi';
