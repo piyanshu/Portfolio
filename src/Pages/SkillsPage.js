@@ -10,7 +10,7 @@ function SkillsPage(){
     const [ addSkill ] = useAddSkillsMutation();
 
     const handleClick = () => {
-        setIsShown(true);
+        setIsShown(!isShown);
     };
     const handleAddSkill = (skill) => {
         addSkill(skill);
@@ -26,15 +26,21 @@ function SkillsPage(){
             return <Skill key={skill.id} skill={skill}/>
         })
     }
+    let value;
+    if(isShown){
+        value = 'Show Skills';
+    }else{
+        value= 'Add Skill';
+    }
     return <div>
 
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded float-right mr-2" onClick={handleClick}>
-            Add Skill
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-8 mt-4" onClick={handleClick}>
+            {value}
         </button>
 
         {isShown && <Form onAddSkill={handleAddSkill}/>}
 
-        <div className="flex flex-wrap">{content}</div>
+        {!isShown && <div className="flex flex-wrap mt-4">{content}</div>}
     </div>
 };
 export default SkillsPage;

@@ -25,10 +25,10 @@ const skillsApi = createApi({
                         body: {
                             url: skill.url,
                             title: skill.title
-                        } 
+                        }
                     }
                 }
-            })
+            }),
         }
     }
 });
