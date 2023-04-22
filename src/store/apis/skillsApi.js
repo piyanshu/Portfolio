@@ -34,7 +34,7 @@ const skillsApi = createApi({
                 query: (skill) => {
                     return {
                         url: `/skills/${skill.id}`,
-                        method:'POST'
+                        method:'DELETE'
                     }
                 }
             })
