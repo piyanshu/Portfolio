@@ -3,6 +3,7 @@ import Route from "./components/Route";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import SkillsPage from "./Pages/SkillsPage";
+import ContactPage from "./Pages/ContactPage";
 
 function App(){
     return (
@@ -19,6 +20,9 @@ function App(){
                 </Route>
                 <Route path='/skills'>
                     <SkillsPage/>
+                </Route>
+                <Route path='/contact'>
+                    <ContactPage/>
                 </Route>
             </div>
         </div>
